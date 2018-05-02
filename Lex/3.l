@@ -28,8 +28,7 @@ char opnd[10][10],oprt[10][10],a[100];
                    l++;}
 [0-9]+|[a-zA-Z][a-zA-Z0-9_]* {nopnd++;
                                strcpy(opnd[j],yytext);
-                                 j++;
-                                 printf("here");}
+                                 j++;}
 [\n] { return 1;}
 %%
 
@@ -38,7 +37,6 @@ int main()
 int k;
 printf("Enter the arithmetic expression: ");
 int c = yylex();
-printf("here main");
 if(valid==1 && top==-1 && (nopnd-noprt)==1 && c!=0)
 {
   printf("\nvalid\n");
